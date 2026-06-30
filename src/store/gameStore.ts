@@ -66,7 +66,7 @@ export const useGameStore = defineStore('game', () => {
 
   function connect() {
     // Connect to backend server
-    socket.value = io('http://localhost:3001');
+    socket.value = io();
 
     socket.value.on('connect', () => {
       console.log('Connected to server');
