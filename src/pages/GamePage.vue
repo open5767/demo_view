@@ -364,10 +364,6 @@ function showPublicEffect(card: Card) {
             videoElement = document.createElement('video');
             videoElement.crossOrigin = 'anonymous'; // Important for CORS, but local files might need object URL
             
-            // Note: If using local file path like "C:\..." it will fail in browser.
-            // User should use a valid URL or place file in public folder.
-            videoElement.referrerPolicy = 'no-referrer'; // Try to bypass some hotlink protections
-            
             videoElement.src = sourceUrl;
             videoElement.muted = true; // Required for autoplay usually
             videoElement.loop = true;
